@@ -158,15 +158,7 @@ $env:Q1_SEEDS="1"; python main.py --device cuda --epochs 30 --batch-size 1024 --
 - Logs + checkpoints: `snn_project/results/logs/`
 
 ### Comprehensive Score
-Stored in JSON as 0–1:
-
-```
-comprehensive_score = 0.4 * biological_plausibility
-                    + 0.3 * temporal_efficiency
-                    + 0.3 * neuromorphic_performance
-```
-
-You can report it as 0–100 by multiplying by 100.
+The comprehensive score is calculated based on the actual metrics implemented in the code. Check the JSON results for the specific calculation method used.
 
 ## Evaluate Saved Models (no training)
 You can evaluate previously saved models using `--skip-training`. Ensure `--save-dir` points to the same directory where checkpoints were written (default shown below).
