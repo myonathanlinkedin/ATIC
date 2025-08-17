@@ -1,0 +1,273 @@
+# Enhanced Neuromorphic Benchmark: SNN vs ANN
+# Smart .gitignore for neuromorphic research project
+
+# ===== PYTHON BYTECODE & CACHE =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ===== PYTHON BUILD & DISTRIBUTION =====
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ===== PYTHON TOOLS =====
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff
+instance/
+.webassets-cache
+
+# Scrapy stuff
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# ===== VIRTUAL ENVIRONMENTS =====
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ===== IDE & EDITOR FILES =====
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.atom/
+.brackets.json
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ===== OS GENERATED FILES =====
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.lnk
+
+# ===== PYTORCH & DEEP LEARNING =====
+# Model files
+*.pth
+*.pt
+*.ckpt
+*.pkl
+*.h5
+*.hdf5
+*.npz
+*.npy
+
+# Model directories
+checkpoints/
+weights/
+# models/  # Commented out - we want to keep Python files in models/
+*.model
+*.weights
+
+# Training logs and outputs
+logs/
+runs/
+tensorboard_logs/
+wandb/
+mlruns/
+
+# ===== NEUROMORPHIC DATASETS =====
+# Large binary dataset files
+data/N-MNIST/**/*.bin
+data/SHD/*.h5
+data/SHD/*.h5.gz
+data/**/*.zip
+data/**/*.tar
+data/**/*.tar.gz
+
+# ===== RESULTS & OUTPUTS =====
+# Results directories
+results/
+outputs/
+# charts/  # Commented out - we want to keep Python files in charts/
+plots/
+
+# Image and document outputs
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.svg
+
+# Benchmark results (large JSON files)
+complete_benchmark_results*.json
+benchmark_results*.json
+*_results.json
+
+# Energy monitoring data
+energy_logs/
+power_logs/
+hardware_logs/
+
+# ===== TEMPORARY & BACKUP FILES =====
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+*.bak
+*.backup
+*.old
+
+# ===== TEST OUTPUTS =====
+tests/test_output/
+test_output/
+
+# ===== CONFIGURATION FILES =====
+# Sensitive configuration
+config_local.py
+.env.local
+.env.production
+
+# Large data files
+*.csv
+*.tsv
+*.json.gz
+*.json.bz2
+
+# ===== EXCEPTIONS - KEEP THESE FILES =====
+# Keep ALL Python source files
+!*.py
+
+# Keep important project files
+!README.md
+!LICENSE
+!main.py
+!requirements.txt
+!environment/env.yaml
+!test.json
+
+# Keep documentation
+!*.md
+!docs/
+
+# Keep dataset structure (but not large files)
+!data/N-MNIST/
+!data/SHD/
+!data/**/README*
+!data/**/*.txt
+!data/**/*.md
+
+# Keep results structure (but not large files)
+!results/README*
+!results/*.md
+!results/*.txt
+
+# Keep log structure (but not large files)
+!logs/README*
+!logs/*.md
+!logs/*.txt
