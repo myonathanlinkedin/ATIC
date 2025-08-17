@@ -1,9 +1,11 @@
-# Enhanced Neuromorphic Benchmark: SNN vs ANN
+# Enhanced Neuromorphic Benchmark: SNN vs ANN with ATIC and NAA
 
-An end-to-end benchmark for Spiking Neural Networks (SNNs) vs. Artificial Neural Networks (ANNs) on real neuromorphic datasets, featuring temporal and neuromorphic metrics, energy monitoring, and publication-ready plots.
+An end-to-end benchmark for Spiking Neural Networks (SNNs) vs. Artificial Neural Networks (ANNs) on real neuromorphic datasets, featuring advanced temporal processing frameworks, comprehensive neuromorphic metrics, energy monitoring, and publication-ready plots.
 
 ## Highlights
-- Spiking model with ETAD pooling and optional Norse-style LIF dynamics
+- **ATIC (Adaptive Temporal Information Compression)**: Information-theoretic optimal temporal processing with adaptive compression
+- **NAA (Neural Architecture Adaptation)**: Real-time architecture optimization based on input characteristics
+- Spiking model with Norse-style LIF dynamics and enhanced cognitive neuroscience framework
 - ANN baseline with matched capacity
 - Combined neuromorphic datasets: N-MNIST + SHD
   - Unified 30-class setting: 0–9 (N-MNIST), 10–29 (SHD)
@@ -32,13 +34,32 @@ snn_project/
       ├─ evaluation/
       │   └─ benchmark_runner.py      # Training, evaluation, metrics, logging
       ├─ models/                      # SNN & ANN models
-      │   ├─ snn_etad_improved.py
-      │   └─ ann_baseline.py
+      │   ├─ snn_etad_improved.py    # Main SNN with ATIC, NAA, and LIF neurons
+      │   ├─ ann_baseline.py         # ANN baseline for comparison
+      │   └─ utils.py                 # Utility functions and components
       ├─ dataloaders/                 # Dataset loaders
       │   ├─ nmnist_loader.py
       │   └─ shd_loader.py
+      ├─ config/                      # Configuration constants
+      │   └─ constants.py             # Model, dataset, and training parameters
       └─ logging/                     # Plotting & reporting utilities
 ```
+
+## Core Frameworks
+
+### ATIC (Adaptive Temporal Information Compression)
+The ATIC framework provides information-theoretic optimal temporal processing with:
+- **Adaptive Compression**: Dynamic compression based on input complexity
+- **Information Entropy**: Computes entropy for optimal temporal processing
+- **Temporal Binding**: Biological plausibility through temporal binding mechanisms
+- **Real-time Adaptation**: Continuous adaptation to input characteristics
+
+### NAA (Neural Architecture Adaptation)
+The NAA framework enables real-time architecture optimization:
+- **Complexity Assessment**: Analyzes input complexity in real-time
+- **Resource Optimization**: Optimizes computational pathways
+- **Adaptive Layer Configuration**: Dynamically selects optimal architecture
+- **Cognitive Task Optimization**: Adapts to specific cognitive requirements
 
 ## Requirements
 - Python 3.10+
@@ -73,6 +94,8 @@ Notes:
  - Internally, SHD (700×time) is converted into a 2×34×34 representation for the combined pipeline.
 
 ## Quickstart
+
+The benchmark automatically uses ATIC and NAA frameworks for enhanced temporal processing and architecture adaptation.
 
 From the repository root (recommended):
 
@@ -125,8 +148,13 @@ $env:Q1_SEEDS="1"; python main.py --device cuda --epochs 30 --batch-size 1024 --
 - JSON results: `snn_project/results/complete_benchmark_results.json`
   - Keys of interest:
     - `results.snn.metrics.enhanced_metrics`: `biological_plausibility`, `temporal_efficiency`, `neuromorphic_performance`, `comprehensive_score`
+    - `results.snn.atic_metrics`: ATIC framework performance metrics
+    - `results.snn.naa_metrics`: NAA framework adaptation metrics
     - The ANN block mirrors the SNN block
 - Charts: `snn_project/results/charts/`
+  - ATIC sensitivity analysis and temporal binding visualizations
+  - NAA architecture adaptation patterns
+  - Traditional performance and energy metrics
 - Logs + checkpoints: `snn_project/results/logs/`
 
 ### Comprehensive Score
@@ -167,12 +195,28 @@ $env:Q1_SEEDS="1"; python -m snn_project.main --device cpu --epochs 1 --batch-si
 - Stability: BatchNorm more stable with large batches; gradients smoother.
 - Convergence: with only 20 epochs, large batches can slightly slow convergence per sample; compensate by more epochs if accuracy plateaus.
 
+## Enhanced Cognitive Neuroscience Framework
+
+The benchmark includes a comprehensive cognitive neuroscience framework:
+
+- **Brain Region Mapping**: Maps SNN layers to visual cortex regions (V1, V2, V4, IT)
+- **Cognitive Process Analysis**: Attention mechanisms, memory processes, executive functions
+- **Theoretical Neuroscience Validation**: Temporal binding hypothesis, predictive coding theory, neural synchronization
+- **Statistical Validation**: Confidence intervals, effect sizes, normality tests, outlier detection
+
 ## Advanced Usage
 - Multi-seed selection: set `Q1_SEEDS` to run multiple seeds and internally select the best empirical score (JSON schema stays the same).
 - Energy monitoring: detailed JSON logs (`results/logs/`) feed power/efficiency charts; you can delete the detailed hardware logs if not needed for analysis.
+- Framework customization: Modify ATIC and NAA parameters in `src/config/constants.py`
 
 ## Contributing
 Pull requests are welcome. Please ensure code clarity and avoid breaking the JSON result schema. For substantial changes, share a short rationale in the PR description.
+
+### Framework Extensions
+- **ATIC Extensions**: Add new temporal processing mechanisms or entropy calculations
+- **NAA Extensions**: Implement new architecture adaptation strategies
+- **Cognitive Framework**: Extend brain region mapping or cognitive process analysis
+- **Metrics**: Add new neuromorphic or biological plausibility metrics
 
 ## License
 
